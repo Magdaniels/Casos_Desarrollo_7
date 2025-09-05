@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión Camiones y Conductores</title>
+</head>
+<body>
+    <h1>Gestión Camiones y Conductores</h1>
+
+    <h2>Agregar Conductor</h2>
+    <form action="/conductores/guardar" method="post">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="email" name="correo" placeholder="Correo" required>
+        <button type="submit">Guardar Conductor</button>
+    </form>
+
+    <hr>
+
+    <h2>Agregar Camión</h2>
+    <form action="/camiones/guardar" method="post">
+        <input type="text" name="nombre" placeholder="Nombre del camión" required>
+        <input type="text" name="placa" placeholder="Placa" required>
+        <input type="text" name="conductor" placeholder="Nombre del conductor" required>
+        <button type="submit">Guardar Camión</button>
+    </form>
+
+    <hr>
+
+    <h2>Buscar Camión por Placa</h2>
+<form action="/camiones/buscar" method="get">
+    <input type="text" name="placa" placeholder="Placa" required>
+    <button type="submit">Buscar</button>
+</form>
+
+<p th:text="${resultado}"></p>
+
+</body>
+</html>

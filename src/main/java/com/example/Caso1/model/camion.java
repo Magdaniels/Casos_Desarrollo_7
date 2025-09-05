@@ -22,6 +22,10 @@ public class camion {
     @Column(name = "conductor")
     private String conductor;
 
+    @Column(name = "nombre")
+    private String nombre;
+
+
     public Long getId() {
         return id;
     }
@@ -42,6 +46,12 @@ public class camion {
         this.conductor = conductor;
     }
 
-    
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
 }
